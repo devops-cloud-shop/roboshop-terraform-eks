@@ -86,14 +86,13 @@ module "eks" {
     # #     nodegroup = "green"
     # #   }
     # }
-  }
-
-  tags = merge(
+  }  
+ }
+ 
+ tags = merge(
     local.common_tags,
     {
         Name = local.common_name_suffix
     }
   )
-  
-  }
 }
